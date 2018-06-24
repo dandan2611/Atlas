@@ -84,4 +84,9 @@ public abstract class Agence {
     }
 
     public static List<Agence> agences;
+
+    static {
+        agences.add(new atlas.agencies.Atlas());
+        agences.add(new DGSE());
+    }
 }
