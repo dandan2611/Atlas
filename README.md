@@ -6,10 +6,6 @@ Il y a des agents `Agent`, qui peuvent rejoindre des agences `Agence`, qui propo
 
 Il faut créer une classe avec une méthode main.
 
-Puis, pour initialiser l'Atlas, y entrer un Init:
-
-`Atlas.demarrerAtlas();`
-
 
 # Agents
 Ensuite pour commencer, créez un Agent:

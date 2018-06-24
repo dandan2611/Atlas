@@ -20,7 +20,7 @@ public class Atlas {
     /**
      * Mettre en place les bases d'Atlas
      */
-    public static void demarrerAtlas() {
+    static {
         Agence.agences.add(new atlas.agencies.Atlas());
         Agence.agences.add(new DGSE());
     }
