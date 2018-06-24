@@ -3,6 +3,7 @@ package atlas.agencies;
 import atlas.agent.Agent;
 import atlas.missions.Mission;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,6 @@ public abstract class Agence {
      */
     public Agence() {
         missions = missions();
-        agences.add(this);
     }
 
     /**
@@ -86,6 +86,7 @@ public abstract class Agence {
     public static List<Agence> agences;
 
     static {
+        agences = new ArrayList<>();
         agences.add(new atlas.agencies.Atlas());
         agences.add(new DGSE());
     }
