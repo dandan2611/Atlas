@@ -1,7 +1,6 @@
 import atlas.Mission;
 import atlas.Solution;
 
-
 public class ExempleSolutionMission3 implements Solution {
 
 	@Override

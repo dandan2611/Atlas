@@ -5,50 +5,41 @@ import atlas.Solution;
 public class ExempleMain {
 	public static void main(String args[]) {
 
-		// on créé d'abord son objet Agent avec son nom et prénom
+		// On crÃ©e d'abord son objet Agent avec son nom et prÃ©nom
 		Agent agent = new Agent();
 		agent.nom = "Smith";
 		agent.prenom = "John";
 
 
-		// puis on rejoint une agence, il y en a actuellement 2, Atlas pour les premières missions et DGSE pour des missions plus complexes
+		// Puis on rejoint une agence, il y en a actuellement 2, Atlas pour les premiÃ¨res missions et DGSE pour des missions plus complexes
 		agent.rejoindreAgence("Atlas");
 
 		agent.afficherInformationsAgent();
 
-		// par cette commande on voit la liste des missions disponible
+		// Par cette commande on voit la liste des missions disponible
 		agent.afficherMissionsDisponibles();
 
 
-		// on en choisit une par son nom, cela a pour effet d'afficher le briefing
+		// On en choisit une par son nom, cela a pour effet d'afficher le briefing
 		agent.choisirMission("Cible prioritaire");
-		// toutes les missions sont des problèmes qui demandent de travailler sur un tableau d'objets Cible donné en entré, pour retourner un résultat précis
+		// Ou par son niveau de difficultÃ©
+		agent.choisirMission(1);
+
+		// Toutes les missions sont des problÃ¨mes qui demandent de travailler sur un tableau d'objets Cible donnÃ© en entrÃ©e, pour retourner un rÃ©sultat prÃ©cis
 
 
-		// on doit alors résoudre la mission en créant une classe qui implement Solution
+		// On doit alors rÃ©soudre la mission en crÃ©ant une classe qui implement Solution
 		Solution solution = new ExempleSolutionMission1();
 		agent.accomplirMission(solution);
 
-
-
 		agent.afficherMissionsDisponibles();
-
-
 
 		agent.choisirMission("Argent facile");
 
 		solution = new ExempleSolutionMission2();
 		agent.accomplirMission(solution);
 
-
-
-
-
 		agent.afficherMissionsDisponibles();
-
-
-
-		agent.choisirMission(3); // on peut aussi sélectionner la mission par son numéro
 
 		solution = new ExempleSolutionMission3();
 		agent.accomplirMission(solution);
