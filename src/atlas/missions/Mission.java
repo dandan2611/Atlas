@@ -10,9 +10,9 @@ import java.util.Random;
 public class Mission {
 
 	/**
-	 Identifiant de la mission ou numéro
+     Difficulté de la mission, cette variable est également un identifiant
 	 */
-	public int id;
+    public int difficulte;
 
 	/**
 	 Nom de code de la mission
@@ -227,8 +227,8 @@ public class Mission {
 
 		if (!agent.missionReussies.contains(this)) { // Si la mission n'a pas encore été faite, l'agent gagne de l'expérience
 
-			System.out.println("L'agent " + agent.nom + " " + agent.prenom + " gagne " + (this.id * 1000) + " d'expérience");
-			agent.experience += this.id * 1000;
+            System.out.println("L'agent " + agent.nom + " " + agent.prenom + " gagne " + (this.difficulte * 1000) + " d'expérience");
+            agent.experience += this.difficulte * 1000;
 
 		}
 

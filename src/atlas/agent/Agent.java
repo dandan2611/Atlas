@@ -44,7 +44,7 @@ public class Agent {
      */
     public void afficherMissionsDisponibles() {
         System.out.println("------------------------------");
-        System.out.println("Missions disponibles:");
+        System.out.println("Missions disponibles (" + agence.missions.size() + "):");
         if (agence != null) {
             agence.afficherMissions();
         } else {
@@ -119,8 +119,7 @@ public class Agent {
      * @param nomAgence
      */
     public void rejoindreAgence(String nomAgence) {
-        for
-                (Agence agence : Agence.agences) {
+        for (Agence agence : Agence.agences) {
             if (agence.nom().equalsIgnoreCase(nomAgence)) this.agence = agence;
         }
         agence.rejoindreAgence(this);

@@ -4,7 +4,6 @@ import atlas.agent.Cible;
 import atlas.missions.Mission;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Atlas extends Agence {
 
@@ -19,7 +18,7 @@ public class Atlas extends Agence {
     }
 
     @Override
-    public Map<Integer, Mission> missions() {
+    public void missions() {
         HashMap<Integer, Mission> missions = new HashMap();
 
         Mission ciblePrioritaire = new Mission(
@@ -131,14 +130,13 @@ public class Atlas extends Agence {
                 }
         );
 
-        missions.put(1, ciblePrioritaire);
-        missions.put(2, argentFacile);
-        missions.put(3, comptageDeRessources);
-        missions.put(4, ageMoyen);
-        missions.put(5, sagesseDesAnciens);
-        missions.put(6, menaceLointaine);
+        ajouterMission(1, ciblePrioritaire);
+        ajouterMission(2, argentFacile);
+        ajouterMission(3, comptageDeRessources);
+        ajouterMission(4, ageMoyen);
+        ajouterMission(5, sagesseDesAnciens);
+        ajouterMission(6, menaceLointaine);
 
-        return missions;
     }
 
 }

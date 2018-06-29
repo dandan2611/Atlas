@@ -6,7 +6,6 @@ import atlas.missions.Mission;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 public class DGSE extends Agence {
@@ -22,7 +21,7 @@ public class DGSE extends Agence {
     }
 
     @Override
-    public Map<Integer, Mission> missions() {
+    public void missions() {
         HashMap<Integer, Mission> missions = new HashMap();
 
         Mission etudeDemographique = new Mission(
@@ -215,14 +214,12 @@ public class DGSE extends Agence {
                 }
         );
 
-        missions.put(7, etudeDemographique);
-        missions.put(8, mauvaisesFrequentations);
-        missions.put(9, cibleUltraPrioritaire);
-        missions.put(10, classementDesFortunes);
-        missions.put(11, personnesCles);
-        missions.put(12, crackerLeMotDePasse);
-
-        return missions;
+        ajouterMission(7, etudeDemographique);
+        ajouterMission(8, mauvaisesFrequentations);
+        ajouterMission(9, cibleUltraPrioritaire);
+        ajouterMission(10, classementDesFortunes);
+        ajouterMission(11, personnesCles);
+        ajouterMission(12, crackerLeMotDePasse);
     }
 
 }

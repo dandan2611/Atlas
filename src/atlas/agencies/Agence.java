@@ -4,6 +4,7 @@ import atlas.agent.Agent;
 import atlas.missions.Mission;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,13 +35,14 @@ public abstract class Agence {
      *
      * @return Missions disponibles
      */
-    public abstract Map<Integer, Mission> missions();
+    public abstract void missions();
 
     /**
      * Initialiser l'agence de base
      */
     public Agence() {
-        missions = missions();
+        missions = new HashMap<>();
+        missions();
     }
 
     /**
@@ -66,7 +68,7 @@ public abstract class Agence {
             Une fois une mission récupérée sous la variable mission, afficher ses informations
              */
 
-            System.out.println(mission.id + " - " + mission.code + " Fait: " + (agentRecrute.missionReussies.contains(mission) ? "Oui" : "Non"));
+            System.out.println(mission.difficulte + " - " + mission.code + " - Fait: " + (agentRecrute.missionReussies.contains(mission) ? "Oui" : "Non"));
 
         }
 
@@ -79,7 +81,7 @@ public abstract class Agence {
      * @param mission    Mission souhaitant être ajoutée
      */
     public void ajouterMission(int difficulte, Mission mission) {
-        mission.id = difficulte;
+        mission.difficulte = difficulte;
         missions.put(difficulte, mission);
     }
 
