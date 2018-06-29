@@ -83,11 +83,17 @@ public abstract class Agence {
         missions.put(difficulte, mission);
     }
 
-    public static List<Agence> agences;
+    public static List<Agence> agences = chargerAgences();
 
-    static {
+    private static List<Agence> chargerAgences() {
+
+        List<Agence> agences;
+
         agences = new ArrayList<>();
         agences.add(new atlas.agencies.Atlas());
         agences.add(new DGSE());
+
+        return agences;
+
     }
 }

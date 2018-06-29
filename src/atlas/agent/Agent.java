@@ -119,7 +119,8 @@ public class Agent {
      * @param nomAgence
      */
     public void rejoindreAgence(String nomAgence) {
-        for (Agence agence : Agence.agences) {
+        for
+                (Agence agence : Agence.agences) {
             if (agence.nom().equalsIgnoreCase(nomAgence)) this.agence = agence;
         }
         agence.rejoindreAgence(this);
